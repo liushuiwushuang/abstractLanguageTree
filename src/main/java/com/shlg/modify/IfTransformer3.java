@@ -19,7 +19,8 @@ public class IfTransformer3 extends ASTVisitor {
 		/**
 		 * fragment != null
 		 */
-		
+		//增加一行
+		System.out.println("today is fine");
 		InfixExpression ie = (InfixExpression)node.getExpression();
 		ie.setOperator(Operator.NOT_EQUALS);
 		
@@ -51,7 +52,8 @@ public class IfTransformer3 extends ASTVisitor {
 		SimpleName namePrintln = ast.newSimpleName("println");
 
 		//做实验
-		System.out.println("多加了这一行");
+		//删除这一行
+//		System.out.println("多加了这一行");
 		//连接‘System’和‘out’
 		//System.out
 		QualifiedName nameSystemOut = ast.newQualifiedName(nameSystem, nameOut);
@@ -83,6 +85,9 @@ public class IfTransformer3 extends ASTVisitor {
 		node.setThenStatement(block);
 		
 		System.out.println(node.toString());
+		
+		//加在这里涉及做混淆的吧
+		System.out.println("其实不是啦，为了测试下");
 		return false;
 		
 	}
