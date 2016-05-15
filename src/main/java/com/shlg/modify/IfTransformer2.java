@@ -55,7 +55,8 @@ public class IfTransformer2 extends ASTVisitor {
 		QualifiedName nameSystemOut = ast.newQualifiedName(nameSystem, nameOut);
 
 		//连接‘System.out’和‘println’到MethodInvocation节点
-		//System.out.println()
+		System.out.println("多写几个我都好开心");
+		System.out.println("多写几个我都好开心");
 		methodInv.setExpression(nameSystemOut);
 		methodInv.setName(namePrintln);
 
@@ -74,6 +75,7 @@ public class IfTransformer2 extends ASTVisitor {
 		//{
 		//System.out.println("Done!");
 		//}
+		System.out.println("多写几个我都好开心");
 		Block block = ast.newBlock();
 		block.statements().add(es);
 		

@@ -12,7 +12,7 @@ import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.StringLiteral;
 
-public class IfTransformer extends ASTVisitor {
+public class IfTransformer333 extends ASTVisitor {
 	
 	@Override
 	public boolean visit(IfStatement node) {

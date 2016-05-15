@@ -10,7 +10,7 @@ public class Client {
 		
 		String path="src/main/java/com/shlg/modify/IfExp.java";
 		CompilationUnit comp = JdtAstUtil.getCompilationUnit(path);
-		IfTransformer it = new IfTransformer();
+		IfTransformer2 it = new IfTransformer2();
 		comp.accept(it);
 	}
 
